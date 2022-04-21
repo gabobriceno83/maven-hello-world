@@ -1,19 +1,16 @@
 pipeline {
     agent any 
-    tools {
-      maven 'Maven'
-    }
     stages {
         stage('Clone the repo') {
             
             steps {
                 echo'Clona el repo'
-		        git url: 'https://github.com/gabobriceno83/maven-hello-world.git'
+		        git url: 'https://github.com/gabobriceno83/Itera.git'
             }
         }
 		stage('Maven Build') {
             steps {
-                bat 'mvn -Dmaven.test.failure.ignore= true clean package' 
+                echo 'Maven Build' 
             }
         }
 		stage('Unit Test') {
@@ -43,3 +40,5 @@ pipeline {
 	  }
      }
 }
+
+ 
