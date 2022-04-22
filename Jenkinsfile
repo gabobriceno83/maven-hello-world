@@ -10,7 +10,10 @@ pipeline {
             
             steps {
                 echo'Clona el repo'
-		        git url: 'https://github.com/gabobriceno83/maven-hello-world.git'
+		   
+		    git url: 'https://github.com/craygoza/termometer.git'
+		        
+		    //git url: 'https://github.com/gabobriceno83/maven-hello-world.git'
             }
         }
 		stage('Maven Build') {
