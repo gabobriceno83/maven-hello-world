@@ -18,10 +18,10 @@ pipeline {
         }
 		stage('Maven Build') {
             steps {
-		    bat 'mvn -version'
-		    bat 'mvn clean install'
+		    //bat 'mvn -version'
+		    //bat 'mvn clean install'
 		    
-		    //bat 'mvn clean package'
+		    bat 'mvn clean package'
 		    //bat 'mvn install'
 		    //bat "mvn -Dmaven.test.failure.ignore= true clean package" 
                 //echo 'Maven Build' 
