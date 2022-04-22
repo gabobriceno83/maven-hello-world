@@ -15,7 +15,7 @@ pipeline {
         }
 		stage('Maven Build') {
             steps {
-		    bat "mvn install"
+		    bat 'mvn install'
 		    //bat "mvn -Dmaven.test.failure.ignore= true clean package" 
                 //echo 'Maven Build' 
             }
