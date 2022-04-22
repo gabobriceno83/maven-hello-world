@@ -1,5 +1,8 @@
 pipeline {
-    agent any 
+    agent any
+	enviroment {
+		PATH= 'C:\Program Files\apache-maven-3.8.5\bin'
+	}
     stages {
         stage('Clone the repo') {
             
@@ -10,7 +13,8 @@ pipeline {
         }
 		stage('Maven Build') {
             steps {
-                echo 'Maven Build' 
+		    bat "mvn -Dmaven.test.failure.ignore= true clean package" 
+                //echo 'Maven Build' 
             }
         }
 		stage('Unit Test') {
