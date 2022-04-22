@@ -10,13 +10,13 @@ pipeline {
             
             steps {
                 echo'Clona el repo'
-		        git url: 'https://github.com/gabobriceno83/Itera.git'
+		        git url: 'https://github.com/gabobriceno83/maven-hello-world.git'
             }
         }
 		stage('Maven Build') {
             steps {
-		    bat 'mvn install'
-		    //bat "mvn -Dmaven.test.failure.ignore= true clean package" 
+		    //bat 'mvn install'
+		    bat "mvn -Dmaven.test.failure.ignore= true clean package" 
                 //echo 'Maven Build' 
             }
         }
